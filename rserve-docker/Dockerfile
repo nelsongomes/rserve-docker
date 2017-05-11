@@ -37,5 +37,7 @@ RUN echo 'remote enable\nworkdir /data/\n' > /etc/Rserv.conf
 RUN echo '#!/bin/bash\n/usr/bin/R CMD Rserve --no-save\ntail -f /dev/null' > /data/start.sh
 RUN chmod +x /data/start.sh
 
+EXPOSE 6311
+
 # Define default command.
 CMD ["/data/start.sh"]

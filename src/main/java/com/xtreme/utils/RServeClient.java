@@ -25,7 +25,7 @@ public class RServeClient {
       // preload libraries
       RServeClient.loadLibrary("forecast", conn);
 
-      final double[] f = RServeClient.autoArimaForecast("/Users/ngomes/ex.data", 20, conn);
+      final double[] f = RServeClient.autoArimaForecast("/Users/ngomes/Documents/workspace/forecast/sales2.csv", 20, conn);
 
     } catch (final RserveException e) {
       System.out.println(e);

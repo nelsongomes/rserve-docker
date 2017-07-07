@@ -9,6 +9,7 @@ import org.rosuda.REngine.Rserve.RserveException;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.UUID;
 
 public class RServeClient {
@@ -65,6 +66,7 @@ public class RServeClient {
 
         // fetch values (mean)
         final double[] forecasted = conn.eval("result$mean").asDoubles();
+        System.out.println(Arrays.toString(forecasted));
 
         return forecasted;
       }

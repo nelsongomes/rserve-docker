@@ -21,7 +21,7 @@ RUN gpg -a --export 06F90DE5381BA480 | apt-key add -
 RUN add-apt-repository 'deb http://cran-mirror.cs.uu.nl/bin/linux/debian jessie-cran3/'
 
 RUN apt-get update
-RUN apt-get install -y r-base-core r-cran-rserve 
+RUN apt-get install -y r-base-core r-cran-rserve libcurl4-openssl-dev
 
 # Define working directory.
 WORKDIR /data
